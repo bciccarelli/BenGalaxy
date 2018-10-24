@@ -1,3 +1,7 @@
+if(window.innerWidth<window.innerHeight) {
+		
+ 		document.getElementsByTagName("body")[0].removeChild(document.getElementById("issVid")); ;
+	}
 function detectOrientation() {
 	if(window.innerWidth<window.innerHeight) {
 		console.log("less");
