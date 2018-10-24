@@ -7,7 +7,7 @@
 }
 #volume {
     color: white;
-    font: 2em Century Gothic;
+    font: 2em Century Gothic, sans-serif;
     background: none;
     border: none;
     right:10px;
@@ -44,7 +44,7 @@ container {
     border:0px;
     border-left: solid 7px grey;
     color: #bbb;
-    font: 3vh 'Century Gothic';
+    font: 3vh Century Gothic, sans-serif;
     width: 15%;
     height: 100px;
     background-color: #5511dd;
@@ -66,7 +66,7 @@ container {
 
     position: absolute;
     margin-top: 3%;
-    font: 1.8vh 'Century Gothic';
+    font: 1.8vh Century Gothic, sans-serif;
 }
 .project:hover {
     color: white;
@@ -80,18 +80,18 @@ container {
     display: block;
 
     color: #fff; 
-    font: 2em 'Century Gothic';
+    font: 2em Century Gothic, sans-serif;
 }
 .text {
     color: #fff; 
-    font: 50px 'Century Gothic';
+    font: 50px Century Gothic, sans-serif;
 }
 a {
     color: white;
 }
 .bottomLinks {
     color: white;
-    font: 15px 'Century Gothic';
+    font: 15px Century Gothic, sans-serif;
     position: fixed;
     bottom:100px;
     text-align: center;
