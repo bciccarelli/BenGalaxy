@@ -1,4 +1,3 @@
-
 function detectOrientation() {
 	if(window.innerWidth<window.innerHeight) {
 		console.log("less");
@@ -8,7 +7,6 @@ function detectOrientation() {
 		} 
 	} else {
 		for (i=0;i<document.getElementsByClassName("project").length;i++) {
- 			document.getElementById("issVid").style.display="block";
 			document.getElementsByClassName("project")[i].style.height = 100+"px";
 		} 
 	}
