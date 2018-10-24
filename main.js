@@ -8,7 +8,6 @@ function detectOrientation() {
 	} else {
 		for (i=0;i<document.getElementsByClassName("project").length;i++) {
 			document.getElementsByClassName("project")[i].style.height = 100+"px";
-			document.getElementsByClassName("project")[i].style.width = "15%"
 		} 
 	}
 }
