@@ -43,12 +43,8 @@ container {
     display: block;
     border:0px;
     border-left: solid 7px grey;
-<<<<<<< HEAD
     color: #bbb;
     font: 3vh 'Century Gothic';
-=======
-    color: #fff; 
->>>>>>> b65b5071d8eb4b61708b0130c0cf084ce8899cf0
     width: 15%;
     height: 100px;
     background-color: #5511dd;
@@ -65,9 +61,6 @@ container {
 .project div {
     position: relative;
     top: -30px;
-}
-.project div {
-    font: 20px 'Century Gothic';
 }
 .project p {
 
@@ -87,15 +80,11 @@ container {
     display: block;
 
     color: #fff; 
-<<<<<<< HEAD
     font: 2em 'Century Gothic';
-=======
-    font: 30px Century Gothic, sans-serif;
->>>>>>> b65b5071d8eb4b61708b0130c0cf084ce8899cf0
 }
 .text {
     color: #fff; 
-    font: 50px Century Gothic, sans-serif;
+    font: 50px 'Century Gothic';
 }
 a {
     color: white;
