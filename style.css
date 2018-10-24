@@ -1,0 +1,124 @@
+#issVid {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+#volume {
+    color: white;
+    font: 2em Century Gothic;
+    background: none;
+    border: none;
+    right:10px;
+    bottom:10px;
+    position: fixed;
+}
+container {
+    height: 100%;
+    opacity: 0;
+    animation: fadeIn 5s ease forwards;
+    float: center;
+    margin:auto;
+    display: block;
+    padding: 1%;
+}
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.headImage {
+    animation: fadeIn 5s ease forwards;
+ 
+    margin-left: 20px;
+    margin-right: 100%;
+    float: left;
+    max-width: 50%;
+}
+.project {
+    display: block;
+    border:0px;
+    border-left: solid 7px grey;
+<<<<<<< HEAD
+    color: #bbb;
+    font: 3vh 'Century Gothic';
+=======
+    color: #fff; 
+>>>>>>> b65b5071d8eb4b61708b0130c0cf084ce8899cf0
+    width: 15%;
+    height: 100px;
+    background-color: #5511dd;
+
+    margin:1%;
+    text-align: left;
+    float: left;
+    -webkit-transition: all 2s ease-out;
+    -moz-transition: all 2s ease-out;
+    -o-transition: all 2s ease-out;
+    transition: all 2s ease-out;
+
+}
+.project div {
+    position: relative;
+    top: -30px;
+}
+.project div {
+    font: 20px 'Century Gothic';
+}
+.project p {
+
+    position: absolute;
+    margin-top: 3%;
+    font: 1.8vh 'Century Gothic';
+}
+.project:hover {
+    color: white;
+    width: 30%;
+    background-color: rgba(0,0,0,.6);
+}
+.centerText {
+    text-align: center;
+    width:60%;
+    padding: 20%;
+    display: block;
+
+    color: #fff; 
+<<<<<<< HEAD
+    font: 2em 'Century Gothic';
+=======
+    font: 30px Century Gothic, sans-serif;
+>>>>>>> b65b5071d8eb4b61708b0130c0cf084ce8899cf0
+}
+.text {
+    color: #fff; 
+    font: 50px Century Gothic, sans-serif;
+}
+a {
+    color: white;
+}
+.bottomLinks {
+    color: white;
+    font: 15px 'Century Gothic';
+    position: fixed;
+    bottom:100px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin:0;
+}
+body {
+
+    padding: 0%;
+    margin: 0%;
+    height: 100%; 
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-attachment: fixed;
+}
