@@ -92,7 +92,7 @@ a {
 }
 .bottomLinks {
     color: white;
-    font: 15px Niramit, sans-serif;
+    font: 2vh Niramit, sans-serif;
     position: fixed;
     bottom:100px;
     text-align: center;
