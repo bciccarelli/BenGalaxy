@@ -1,6 +1,5 @@
 function detectOrientation() {
 	if(window.innerWidth<window.innerHeight) {
-		console.log("less");
 		for (i=0;i<document.getElementsByClassName("project").length;i++) {
 			document.getElementsByClassName("project")[i].style.height = window.innerHeight/6+"px";
 			document.getElementsByClassName("project")[i].style.width = "48%"
@@ -9,19 +8,17 @@ function detectOrientation() {
 		for (i=0;i<document.getElementsByClassName("project").length;i++) {
 			document.getElementsByClassName("project")[i].style.height = 100+"px";
 			document.getElementsByClassName("project")[i].style.width = "15%";
-			console.log("called")
 		} 
 	}
-	if()
 }
 setTimeout(function() {
 	os = getOS();
 	if(os<2) {
-		document.getElementsByTagName("body").removeChild(document.getElementById("issVid"));
+		document.getElementById("vidSrc").src="";
 		document.getElementById("output").innerText="done.";
 	}
 	detectOrientation();
-},100);
+},10);
 
 function getOS() {
   var userAgent = window.navigator.userAgent,

@@ -40,6 +40,7 @@ container {
     max-width: 50%;
 }
 .project {
+    border-radius: 10px;
     display: block;
     border:0px;
     border-left: solid 7px grey;
