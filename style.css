@@ -45,12 +45,12 @@ container {
     border:0px;
     border-left: solid 7px grey;
     color: #bbb;
-    font: 1.2em Niramit, sans-serif;
-    width: 15%;
+    font: 2.5vh Niramit, sans-serif;
+    width: 16%;
     height: 100px;
     background-color: #5511dd;
 
-    margin:1%;
+    margin:.5%;
     text-align: left;
     float: left;
     -webkit-transition: all 2s ease-out;

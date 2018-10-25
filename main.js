@@ -7,15 +7,15 @@ function detectOrientation() {
 	} else {
 		for (i=0;i<document.getElementsByClassName("project").length;i++) {
 			document.getElementsByClassName("project")[i].style.height = 100+"px";
-			document.getElementsByClassName("project")[i].style.width = "15%";
-		} 
+			//document.getElementsByClassName("project")[i].style.width = "15%";
+			console.log("width")
+		}
 	}
 }
 setTimeout(function() {
 	os = getOS();
 	if(os<2) {
 		document.getElementById("vidSrc").src="";
-		document.getElementById("output").innerText="done.";
 	}
 	detectOrientation();
 },10);
