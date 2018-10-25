@@ -18,6 +18,7 @@ setTimeout(function() {
 	os = getOS();
 	if(os<2) {
 		document.getElementsByTagName("body").removeChild(document.getElementById("issVid"));
+		document.getElementById("output").innerText="done.";
 	}
 	detectOrientation();
 },100);
