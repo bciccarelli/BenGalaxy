@@ -102,9 +102,9 @@ function setupCanvas() {
 
 function drawSpace() {
     frame++;
-    b=Math.floor((Math.sin(frame/100+2*Math.PI/3)+1)*128);
-    r=Math.floor((Math.sin(frame/100+4*Math.PI/3)+1)*128);
-    g=Math.floor((Math.sin(frame/100+2*Math.PI)+1)*128);
+    b=Math.floor((Math.sin(frame/40+2*Math.PI/3)+1)*128);
+    r=Math.floor((Math.sin(frame/40+4*Math.PI/3)+1)*128);
+    g=Math.floor((Math.sin(frame/40+2*Math.PI)+1)*128);
     color="rgb("+r+", "+g+", "+b+")";
     if (d > 10) {
       d=0;
