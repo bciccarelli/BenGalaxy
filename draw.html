@@ -1,0 +1,32 @@
+<!--COPYRIGHT 2018 BENJAMIN CICCARELLI-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="earth.png" type="image/png"/>
+	<link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
+	<title>Ben Galaxy</title>
+</head>
+<body style="cursor: crosshair;" bgcolor="#000" id="body" onload = "startNotes()">
+
+<canvas width="4000" height="2000" id="bgcanvas">
+	</canvas>
+<container id="main">
+	<label class="static" style="position: absolute; color:white; bottom: 160px; font:2vw Century Gothic, sans-serif;">Color: </label>
+	<input class="static" style="position: absolute; bottom: 100px; width: 200px; height: 50px; font:2vw Century Gothic, sans-serif;" value="white" type="text" id="colorField">
+	<label class="static" style="position: absolute; color:white; bottom: 60px; font:2vw Century Gothic, sans-serif;">Stroke Width: </label>
+	<input class="static" style="position: absolute; bottom: 30px;" value="10" min="1" max="100" type="range" id="strokeWidth"/>
+	<button class="static" style="position: absolute; color:black; bottom: 200px; font:2vw Century Gothic, sans-serif;" onclick="eraser=!eraser"> Toggle Eraser </button>
+	<a href="home.html"><image class="headImage" src="BenGalaxy.png" style="width:10%"></image></a>
+	
+	<!-- output to here - - > <div id="output" class="bottomLinks" style="bottom: 40px">output</div>-->
+</container>
+<div class="bottomLinks" style="bottom: 80px"><a href="mailto:ben@bengalaxy.com">Contact</a></div>
+<div class="bottomLinks" style="bottom: 60px">Copyright © 2018 Benjamin Ciccarelli</div>
+
+<div class="topLinks" style="top: 60px"> Hint: right-click to save files </div>
+</body>
+	<script src="draw.js"></script>
+</html>

@@ -1,5 +1,6 @@
 #bgcanvas {
     position: fixed;
+    top:0;
     right: 0;
     bottom: 0;
     min-width: 100%; 
@@ -13,6 +14,13 @@
     right:10px;
     bottom:10px;
     position: fixed;
+}
+.static {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 container {
     height: 100%;
@@ -33,11 +41,16 @@ container {
 }
 .headImage {
     animation: fadeIn 2s ease forwards;
- 
     margin-left: 20px;
     margin-right: 100%;
     float: left;
     max-width: 50%;
+
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .project {
     border-radius: 10px;
@@ -197,12 +210,32 @@ a {
 .bottomLinks {
     color: white;
     font: 2vh Niramit, sans-serif;
-    position: fixed;
+    position: absolute;
     bottom:100px;
     text-align: center;
     width: 100%;
     display: block;
     margin:0;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.topLinks {
+    color: white;
+    font: 2vh Niramit, sans-serif;
+    position: absolute;
+    top:100px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin:0;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 body {
     padding: 0px;
@@ -258,4 +291,42 @@ body {
     font-size: 30px;
     height: 500px;
     width: 47%;
+}
+.cookies {
+    background-color: rgba(100,0,240,.9);
+    position: absolute;
+    display: block;
+    z-index: 200;
+    text-align: center;
+
+    width:50%;
+    height: 500px;
+    font:3vw Century Gothic, sans-serif;
+    transition: all .5s;
+    margin:25%;
+    margin-top:10%;
+    margin-bottom:0%;
+}
+
+.cookies p {
+    font:3vw Century Gothic, sans-serif;
+    border: 0px;
+    margin: 10%;
+    margin-top: 10%;
+    color: black;
+}
+.cookies button {
+    font:3vw Century Gothic, sans-serif;
+    border: 0px;
+    margin: 10%;
+    margin-top: 10%;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    transition:all .5s;
+}
+.cookies button:hover {
+    padding: 30px;
+    color: grey;
+    background-color: black;
 }

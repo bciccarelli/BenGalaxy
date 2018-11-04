@@ -1,3 +1,4 @@
+var acceptsCookies;
 function detectOrientation() {
 	if(window.innerWidth<window.innerHeight) {
 		for (i=0;i<document.getElementsByClassName("project").length;i++) {
@@ -23,7 +24,6 @@ function pageOnLoad() {
     setupCanvas();
     detectOrientation();
 }
-
 function getOS() {
   var userAgent = window.navigator.userAgent,
   platform = window.navigator.platform,
