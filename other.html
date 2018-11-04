@@ -11,17 +11,19 @@
 	<script src="main.js"></script>
 </head>
 
-<body bgcolor="#000" id="body" onload="detectOrientation()">
-<video autoplay muted loop id="issVid">
-  <source src="ISS_lr.mp4" type="video/mp4">
-</video>
+<body bgcolor="#000" id="body" onload = "pageOnLoad()" onresize="detectOrientation()">
+<canvas width="1080" height="720" id="bgcanvas">
+</canvas>
 
 <container id="main">
 	<a href="home.html"><image class="headImage" src="BenGalaxy.png"></image></a>
-	<a  target="_blank" href=""><button class="project"><div>WPM Test<p> A words per minute tester </p></div></button></a>
+	<a href="asmInterpreter.html"><button class="project2"><div>ASM Interpreter<p> Online ASM interpreter with visible registers </p></div></button></a>
+	<a href=""><button class="project2"><div>WPM Test<p> A words per minute tester </p></div></button></a>
+	<a href="projectName.html"><button class="project2"><div> Project Name Generator <p> Generate a name for your new project </p></div></button></a>
 	<button onclick="toggleMute()" id="volume">Unmute</button>
-	<div class="bottomLinks"><a target="_blank" href="https://www.youtube.com/watch?v=FG0fTKAqZ5g">Link to video</a> | <a href="mailto:bengalaxywebsite@gmail.com">Contact</a></div>
-	<div class="bottomLinks" style="bottom: 80px">Copyright © 2018 Benjamin Ciccarelli</div>
+	
 </container>
+<div class="bottomLinks"><a target="_blank" href="https://www.youtube.com/watch?v=FG0fTKAqZ5g">Link to video</a> | <a href="mailto:bengalaxywebsite@gmail.com">Contact</a></div>
+<div class="bottomLinks" style="bottom: 80px">Copyright © 2018 Benjamin Ciccarelli</div>
 </body>
 </html>

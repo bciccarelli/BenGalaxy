@@ -1,0 +1,36 @@
+<!--COPYRIGHT 2018 BENJAMIN CICCARELLI-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="earth.png" type="image/png"/>
+	<link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
+	<title>Ben Galaxy</title>
+	<script src="main.js"></script>
+</head>
+
+<body bgcolor="#000" id="body" onload = "pageOnLoad()" onresize="detectOrientation()">
+<canvas width="1080" height="720" id="bgcanvas">
+</canvas>
+<script type="text/javascript">
+var word;
+function generateProjectName(){
+	word = prefixes[Math.floor(Math.random() * prefixes.length)] + fillers[Math.floor(Math.random() * fillers.length)] + suffixes[Math.floor(Math.random() * suffixes.length)]
+	document.getElementById("text").innerText = word;
+
+}
+var prefixes=["Hex","Hexa","Octo","Penta","Tri","Try","Crypto","Cry","Pto","Pte","Meta","Pseudo","Auto","Extra","Anti","Hyper","Mega","Semi","Proto","Consta","Inte","Vara"];
+var fillers=["bin","math","sci","bot","top","typ","wiz","hat","port"];
+var suffixes=["","","","","er","tic","ame","or","ard","ar","est","ite"];
+</script>
+<container id="main">
+	<a href="home.html"><image class="headImage" src="BenGalaxy.png"></image></a>
+	<div id="text" class ="centerText" style="padding-top: 20%;padding-bottom: 10%">Project Name Appears Here</div>
+	<Button onclick="generateProjectName()" class="runButton">GENERATE WORD</Button>
+	<div class="bottomLinks"><a target="_blank" href="https://www.youtube.com/watch?v=FG0fTKAqZ5g">Link to video</a> | <a href="mailto:bengalaxywebsite@gmail.com">Contact</a></div>
+	<div class="bottomLinks" style="bottom: 80px">Copyright © 2018 Benjamin Ciccarelli</div>
+</container>
+</body>
+</html>

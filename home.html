@@ -9,25 +9,27 @@
 	<link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
 	<title>Ben Galaxy</title>
 </head>
-<body bgcolor="#000" id="body" onresize="detectOrientation()">
-<video autoplay muted loop id="issVid">
-  <source id="vidSrc" src="ISS_lr.mp4" type="video/mp4">
-</video>
+<body bgcolor="#000" id="body" onload = "pageOnLoad()" onresize="detectOrientation()">
+<canvas width="1080" height="720" id="bgcanvas">
+</canvas>
 <container id="main">
 	<a href="home.html"><image class="headImage" src="BenGalaxy.png"></image></a>
-	<a  target="_blank" href=""><button class="project"><div>GalakTerm<p> A Galak-C terminal for windows</p></div></button></a>
-	<a target="_blank" href=""><button class="project"><div>NeuroGenesis<p> A neural network for estimating functions</p></div></button></a>
-	<a target="_blank" href=""><button class="project"><div>Netter<p>A JS Library for making online games without a private server</p></div></button></a>
+	<a  target="_blank" href="https://github.com/AluminumChassis/galakShell"><button class="project"><div>GalakShell<p> A Galak-C shell for windows</p></div></button></a>
+	<a target="_blank" href="https://github.com/AluminumChassis/neuroGenesis"><button class="project"><div>NeuroGenesis<p> A neural network for estimating functions</p></div></button></a>
+	<a target="_blank" href="https://github.com/AluminumChassis/netter"><button class="project"><div>Netter<p>A JS Library for making online games without a private server</p></div></button></a>
 	<a target="_blank" href=""><button class="project"><div>Begin JS<p>A JavaScript library for making web games</p></div></button></a>
 	<a href="other.html"><button class="project"><div>Other<p> Random, smaller projects </p></button></div></a>
 	<a target="_blank" href=""><button class="project"><div>All<p> All projects </p></div></button></a>
 	<button onclick="toggleMute()" id="volume">Unmute</button>
-	<div class="bottomLinks"><a target="_blank" href="https://www.youtube.com/watch?v=FG0fTKAqZ5g">Link to video</a> | <a href="mailto:bengalaxywebsite@gmail.com">Contact</a></div>
-	<div class="bottomLinks" style="bottom: 80px">Copyright © 2018 Benjamin Ciccarelli</div>
+
+
 	<!-- output to here - - > <div id="output" class="bottomLinks" style="bottom: 40px">output</div>-->
 </container>
+<div class="bottomLinks"><a target="_blank" href="https://www.youtube.com/watch?v=FG0fTKAqZ5g">Link to video</a> | <a href="mailto:ben@bengalaxy.com">Contact</a></div>
+<div class="bottomLinks" style="bottom: 80px">Copyright © 2018 Benjamin Ciccarelli</div>
+
+<button id="sideBar" onclick = "sideBarClick()"><p> &#171; </p><a href="mailto:ben@bengalaxy.com"><div class="sideButton">CONTACT ☏</div></a><a target="_blank" href="https://lichess.org/@/AluminumChassis"><div class="sideButton">CHESS&#9816</div></a></button>
 <div id="clickAway" onclick="clickAway()"></div>
-<button id="sideBar" onclick = "sideBarClick()"><p> &#171; </p><div class="t">CONTACT ☏</div><a target="_blank" href="https://lichess.org/@/AluminumChassis"><div class="t">CHESS&#9816</div></a></button>
 </body>
 
 	<script src="main.js"></script>
