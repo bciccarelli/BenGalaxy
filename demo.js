@@ -2,14 +2,14 @@ var canvas, ctx;
 var canvasObj, ctxObj;
 var iDstW = 256;
 var iDstH = 256;
-var iXSpeed = 4;
-var iYSpeed = 3;
+var iXSpeed = 0;
+var iYSpeed = 0;
 var iLastX = iDstW / 2;
 var iLastY = iDstH / 2;
 var oImage;
 var aMap = [];
 var aBitmap;
-
+var i = 0;
 var mathSphere = function(px, py) {
     var x = px - iDstW / 2;
     var y = py - iDstH / 2;
@@ -57,9 +57,10 @@ window.onload = function(){
     };
 
     function updateScene() {
-
+        i++;
         // update last coordinates
-        iLastX = iLastX + iXSpeed;
+        iLastX = canvas.width/2+100*Math.sin(i);
+        iLasty = canvas.height/2+100*Math.cos(i);
         iLastY = iLastY + iYSpeed;
 
         // reverse speed
@@ -100,7 +101,7 @@ window.onload = function(){
         ctxObj.putImageData(aBitmap,0,0);
         ctxObj.beginPath();
         ctxObj.filter="blur(10px)";
-        ctxObj.arc(canvasObj.width/2,canvasObj.height/2,80,0,2*Math.PI);
+        ctxObj.arc(canvasObj.width/2,canvasObj.height/2,60,0,2*Math.PI);
         ctxObj.fillStyle="#000";
         ctxObj.fill();
         ctxObj.filter="none";
