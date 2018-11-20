@@ -57,12 +57,12 @@ window.onload = function(){
     };
 
     function updateScene() {
-        angle++;
+        angle+=.5;
         // update last coordinates
-        iLastX = Math.round(canvas.width/2+100*Math.sin(angle * Math.PI/180));
-        iLastY = Math.round(canvas.height/2+100*Math.cos(angle * Math.PI/180));
-        var zzx = Math.round(canvas.height/2+100*Math.sin(angle * Math.PI/180 + Math.PI));
-        var zzy = Math.round(canvas.height/2+100*Math.cos(angle * Math.PI/180 + Math.PI));
+        iLastX = canvas.width/2+100*Math.sin(angle * Math.PI/180);
+        iLastY = canvas.height/2+100*Math.cos(angle * Math.PI/180);
+        var zzx = canvas.height/2+100*Math.sin(angle * Math.PI/180 + Math.PI);
+        var zzy = canvas.height/2+100*Math.cos(angle * Math.PI/180 + Math.PI);
         // reverse speed
         if (iLastX > ctx.canvas.width - iDstW/2) {
             iXSpeed = -3;
