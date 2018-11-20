@@ -41,7 +41,7 @@ window.onload = function(){
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
         // and draw source image
-        ctx.drawImage(oImage, 0, 0);
+        ctx.drawImage(oImage, -300, -300);
 
         aBitmap = ctx.getImageData(0, 0, iDstW, iDstH);
         for (var y = 0; y < iDstH; y++) {
@@ -104,6 +104,8 @@ window.onload = function(){
         ctxObj.arc(canvasObj.width/2,canvasObj.height/2,20,0,2*Math.PI);
         ctxObj.fillStyle="#000";
         ctxObj.fill();
+
+        ctx.drawImage(oImage, -300, -300);
         ctx.beginPath();
         ctx.filter="blur(3px)";
         ctx.arc(zzx,zzy,60,0,2*Math.PI);
