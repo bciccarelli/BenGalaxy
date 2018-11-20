@@ -60,7 +60,7 @@ window.onload = function(){
         angle++;
         // update last coordinates
         iLastX = canvas.width/2+100*Math.sin(angle * Math.PI/180);
-        iLasty = canvas.height/2+100*Math.cos(angle * Math.PI/180);
+        iLastY = canvas.height/2+100*Math.cos(angle * Math.PI/180);
 
         // reverse speed
         if (iLastX > ctx.canvas.width - iDstW/2) {
