@@ -99,11 +99,11 @@ window.onload = function(){
         }
         ctxObj.putImageData(aBitmap,0,0);
         ctxObj.beginPath();
-        ctx.filter="blur(10px)";
-        ctx.arc(iLastX - Math.floor(iDstW / 2),iLastY - (Math.floor(iDstH / 2)),30,0,2*Math.PI);
-        ctx.fillStyle="#000";
-        ctx.fill();
-        ctx.filter="none";
+        ctxObj.filter="blur(10px)";
+        ctxObj.arc(iLastX - iDstW,iLastY - iDstH,30,0,2*Math.PI);
+        ctxObj.fillStyle="#000";
+        ctxObj.fill();
+        ctxObj.filter="none";
         
         // update timer
         setTimeout(updateScene, 16);
