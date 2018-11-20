@@ -22,6 +22,18 @@
     -ms-user-select: none;
     user-select: none;
 }
+.shadowReader {
+    text-align: center;
+    margin-top: 10%;
+    width:60%;
+
+    padding:10%;
+    padding-left:20%;
+    padding-right:20%; 
+    background-color: #000;
+    color: #fff; 
+    font: 2em Niramit, sans-serif;
+}
 container {
     height: 100%;
     opacity: 0;
@@ -193,10 +205,13 @@ button[enabled]{
 }
 .centerText {
     text-align: center;
+    margin-top: 14%;
     width:60%;
-    padding: 20%;
-    display: block;
 
+    padding:7%;
+    padding-left:20%;
+    padding-right:20%; 
+    background-color: rgba(100,0,255,.8);
     color: #fff; 
     font: 2em Niramit, sans-serif;
 }
