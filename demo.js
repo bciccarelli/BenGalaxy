@@ -105,6 +105,7 @@ window.onload = function(){
         ctxObj.fillStyle="#000";
         ctxObj.fill();
 
+        ctx.filter="none";
         ctx.drawImage(oImage, -300, -300);
         ctx.beginPath();
         ctx.filter="blur(3px)";
