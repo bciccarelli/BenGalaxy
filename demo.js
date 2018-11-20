@@ -98,7 +98,13 @@ window.onload = function(){
             }
         }
         ctxObj.putImageData(aBitmap,0,0);
-
+        ctxObj.beginPath();
+        ctx.filter="blur(10px)";
+        ctx.arc(iLastX - Math.floor(iDstW / 2),iLastY - (Math.floor(iDstH / 2)),30,0,2*Math.PI);
+        ctx.fillStyle="#000";
+        ctx.fill();
+        ctx.filter="none";
+        
         // update timer
         setTimeout(updateScene, 16);
     }
