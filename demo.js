@@ -78,8 +78,8 @@ window.onload = function(){
         }
 
         // shifting of the second object
-        canvasObj.style.left = iLastX - Math.round(iDstW / 2) + 'px';
-        canvasObj.style.top = iLastY - (Math.round(iDstH / 2)) + 'px';
+        canvasObj.style.left = iLastX - (iDstW / 2) + 'px';
+        canvasObj.style.top = iLastY - (iDstH / 2) + 'px';
 
         // draw result Sphere
         var aData = ctx.getImageData(iLastX - Math.ceil(iDstW / 2), iLastY - Math.ceil(iDstH / 2), iDstW, iDstH + 1);
