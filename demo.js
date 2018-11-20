@@ -9,7 +9,7 @@ var iLastY = iDstH / 2;
 var oImage;
 var aMap = [];
 var aBitmap;
-var i = 0;
+var angle = 0;
 var mathSphere = function(px, py) {
     var x = px - iDstW / 2;
     var y = py - iDstH / 2;
@@ -57,10 +57,10 @@ window.onload = function(){
     };
 
     function updateScene() {
-        i++;
+        angle++;
         // update last coordinates
-        iLastX = canvas.width/2+Math.sin(i * Math.PI/180);
-        iLasty = canvas.height/2+Math.cos(i * Math.PI/180);
+        iLastX = canvas.width/2+Math.sin(angle * Math.PI/180);
+        iLasty = canvas.height/2+Math.cos(angle * Math.PI/180);
         iLastY = iLastY + iYSpeed;
 
         // reverse speed
