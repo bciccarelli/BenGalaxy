@@ -59,8 +59,8 @@ window.onload = function(){
     function updateScene() {
         i++;
         // update last coordinates
-        iLastX = canvas.width/2+100*Math.sin(i);
-        iLasty = canvas.height/2+100*Math.cos(i);
+        iLastX = canvas.width/2+Math.sin(i * pi/180);
+        iLasty = canvas.height/2+Math.cos(i * pi/180);
         iLastY = iLastY + iYSpeed;
 
         // reverse speed
