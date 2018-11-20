@@ -100,7 +100,7 @@ window.onload = function(){
         ctxObj.putImageData(aBitmap,0,0);
         ctxObj.beginPath();
         ctxObj.filter="blur(10px)";
-        ctxObj.arc(canvasObj.width/2,canvasObj.height/2,60,0,2*Math.PI);
+        ctxObj.arc(canvasObj.width/2,canvasObj.height/2,80,0,2*Math.PI);
         ctxObj.fillStyle="#000";
         ctxObj.fill();
         ctxObj.filter="none";
