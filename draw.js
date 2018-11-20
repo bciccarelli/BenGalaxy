@@ -22,7 +22,7 @@ function startNotes() {
 		if(eraser) {
 			ctx2.fillStyle="#000";
 			ctx2.beginPath();
-			ctx2.arc(mousePos.x,mousePos.y,document.getElementById('strokeWidth').value*2,0,2*Math.PI);
+			ctx2.arc(mousePos.x,mousePos.y,document.getElementById('strokeWidth').value,0,2*Math.PI);
 			ctx2.fill();
 		} else {
 			ctx2.fillStyle=document.getElementById('colorField').value;
@@ -45,17 +45,23 @@ function startNotes() {
 	cnvs.addEventListener('mousemove', function(evt) {
 
 		mousePos = getMousePos(cnvs, evt);
-		if(!eraser) {
-			if(mousedown && mousedownlast) {
-				ctx2.lineWidth=document.getElementById('strokeWidth').value;
-				ctx2.strokeStyle=document.getElementById('colorField').value;
-				ctx2.fillStyle=document.getElementById('colorField').value;
-				ctx2.beginPath();
-				ctx2.arc(mousePos.x,mousePos.y,document.getElementById('strokeWidth').value/2,0,2*Math.PI);
-				ctx2.fill();
-				ctx2.beginPath();
-				ctx2.arc(lastPos.x,lastPos.y,document.getElementById('strokeWidth').value/2,0,2*Math.PI);
-				ctx2.fill();
+		if(mousedown){
+			if(!eraser) {
+				if(mousedownlast) {
+					ctx2.lineWidth=document.getElementById('strokeWidth').value;
+					ctx2.strokeStyle=document.getElementById('colorField').value;
+					ctx2.lineCap="round";
+					
+					ctx2.beginPath();
+					ctx2.moveTo(lastPos.x,lastPos.y);		
+					ctx2.lineTo(mousePos.x,mousePos.y)
+					ctx2.stroke();
+				}
+			} else {
+				ctx2.lineWidth=document.getElementById('strokeWidth').value*2;
+				ctx2.strokeStyle="#000000";
+				ctx2.lineCap="round";
+				
 				ctx2.beginPath();
 				ctx2.moveTo(lastPos.x,lastPos.y);		
 				ctx2.lineTo(mousePos.x,mousePos.y)
