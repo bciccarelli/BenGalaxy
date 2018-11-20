@@ -59,8 +59,8 @@ window.onload = function(){
     function updateScene() {
         angle++;
         // update last coordinates
-        iLastX = canvas.width/2+100*Math.sin(angle * Math.PI/180);
-        iLastY = canvas.height/2+100*Math.cos(angle * Math.PI/180);
+        iLastX = Math.round(canvas.width/2+100*Math.sin(angle * Math.PI/180));
+        iLastY = Math.round(canvas.height/2+100*Math.cos(angle * Math.PI/180));
 
         // reverse speed
         if (iLastX > ctx.canvas.width - iDstW/2) {
@@ -100,7 +100,7 @@ window.onload = function(){
         ctxObj.putImageData(aBitmap,0,0);
         ctxObj.beginPath();
         ctxObj.filter="blur(10px)";
-        ctxObj.arc(canvasObj.width/2,canvasObj.height/2,60,0,2*Math.PI);
+        ctxObj.arc(canvasObj.width/2,canvasObj.height/2,70,0,2*Math.PI);
         ctxObj.fillStyle="#000";
         ctxObj.fill();
         ctxObj.filter="none";
