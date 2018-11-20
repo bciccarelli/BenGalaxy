@@ -104,11 +104,11 @@ window.onload = function(){
         ctxObj.arc(canvasObj.width/2,canvasObj.height/2,20,0,2*Math.PI);
         ctxObj.fillStyle="#000";
         ctxObj.fill();
-        ctxObj.beginPath();
-        ctxObj.filter="blur(3px)";
-        ctxObj.arc(canvasObj.width/2,canvasObj.height/2,60,0,2*Math.PI);
-        ctxObj.fillStyle="#fff";
-        ctxObj.fill();
+        ctx.beginPath();
+        ctx.filter="blur(3px)";
+        ctx.arc(zzx,zzy,60,0,2*Math.PI);
+        ctx.fillStyle="#fff";
+        ctx.fill();
         ctxObj.filter="none";
         
         // update timer
