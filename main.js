@@ -1,4 +1,5 @@
 var acceptsCookies;
+
 function detectOrientation() {
 	if(window.innerWidth<window.innerHeight) {
 		for (i=0;i<document.getElementsByClassName("project").length;i++) {
@@ -20,8 +21,9 @@ setTimeout(function() {
 	detectOrientation();
 },10);
 function pageOnLoad() {
-    console.log("page loaded")
     detectOrientation();
+    var d = new Date();
+    console.log("page loaded in: " + (d.getTime()-time) + "ms");
 }
 function getOS() {
   var userAgent = window.navigator.userAgent,
