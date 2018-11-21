@@ -116,9 +116,9 @@ container {
     line-height: 1.1;
     }
 .project:hover {
-    color: white;
-    width: 30%;
-    background-color: rgba(20,0,48,.6);
+    color: white !important;
+    width: 30% !important;
+    background-color: rgba(20,0,48,.6) !important;
 }
 .project2 div {
     position: relative;
@@ -132,9 +132,9 @@ container {
     line-height: 1.1;
     }
 .project2:hover {
-    color: white;
-    width: 30%;
-    background-color: rgba(20,0,48,.6);
+    color: white !important;
+    width: 30% !important;
+    background-color: rgba(20,0,48,.6) !important;
 }
 #sideBar {
     position: absolute;
