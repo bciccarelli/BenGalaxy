@@ -16,6 +16,9 @@ var lastPos = {
 }
 function startNotes() {
     cnvs = document.getElementById("bgcanvas");
+    cnvs.width=window.innerWidth;
+    cnvs.height=window.innerHeight;
+    
     ctx2 = cnvs.getContext("2d");
 	cnvs.addEventListener('mousedown', function(evt) {
 		mousedown=true;
