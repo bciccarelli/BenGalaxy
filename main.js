@@ -47,24 +47,32 @@ function getOS() {
 
   return os;
 }
-function sideBarClick() {
+function aboutClick() {
     console.log("click");
-    document.getElementById("sideBar").style.width="95%";
-    document.getElementById("sideBar").disabled=true;
-    document.getElementById("clickAway").style.display="block";
-    console.log(document.getElementById("sideBar"));
-    for (var i = document.getElementsByClassName("sideButton").length - 1; i >= 0; i--) {
-      document.getElementsByClassName("sideButton")[i].style.fontSize="10vh";
-      document.getElementsByClassName("sideButton")[i].style.padding="10px";
-    }
+    document.getElementById("about").style.width="96%";
+    document.getElementById("about").style.height="96%";
+    //document.getElementById("about").style.top="10%";
+    document.getElementById("about").style.bottom="2%";
+    document.getElementById("about").style.color="grey";
+    document.getElementById("about").style.backgroundColor="rgba(255,255,255,1)";
+    document.getElementById("about").disabled=true;
+
+    document.getElementById("clickAway").style.backgroundColor="rgba(0,0,0,.3)";
+    document.getElementById("clickAway").style.visibility="visible";
+
+    document.getElementById("aboutP").style.fontSize=".4em";
 }
 function clickAway() {
 
-    document.getElementById("sideBar").style.width="4%";
-    document.getElementById("sideBar").disabled=false;
-    document.getElementById("clickAway").style.display="none";
-    for (var i = document.getElementsByClassName("sideButton").length - 1; i >= 0; i--) {
-      document.getElementsByClassName("sideButton")[i].style.fontSize="0vh";
-      document.getElementsByClassName("sideButton")[i].style.padding="0";
-    }
+    document.getElementById("about").style.bottom="20%";
+    document.getElementById("about").style.width="10%";
+    document.getElementById("about").style.height="20%";
+    document.getElementById("about").style.color="rgba(255,255,255,.2)";
+    document.getElementById("about").style.backgroundColor="rgba(255,255,255,.1)";
+    document.getElementById("about").disabled=false;
+
+    document.getElementById("clickAway").style.backgroundColor="rgba(0,0,0,0)";
+    document.getElementById("clickAway").style.visibility="hidden";
+
+    document.getElementById("aboutP").style.fontSize="0em";
 }

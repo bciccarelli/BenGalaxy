@@ -108,7 +108,10 @@ container {
     position: relative;
     top: -30px;
 }
-
+bold {
+    font-weight: bold; 
+    color:black;
+}
 .project p {
     position: absolute;
     margin-top: 1%;
@@ -136,21 +139,30 @@ container {
     width: 30% !important;
     background-color: rgba(20,0,48,.6) !important;
 }
-#sideBar {
+#about {
     position: absolute;
     display: block;
-    z-index: 100;
-    right: 0;
-    bottom:20%;
-    height: 20vh;
-    width:4%;
-    color: black;
+    z-index: 200;
+    right: 2%;
+    bottom: 20%;
+    height: 20%;
+    width:10%;
+    color: rgba(255,255,255,.2);
+    padding: 1%;
     font-size: 10vh;
     border: 5px;
+    font: 5em Niramit, sans-serif;
     border-color: #fff;
-    border-top-left-radius: 10px; 
-    border-bottom-left-radius: 10px;
+    border-radius: 20px; 
     background-color: rgba(255,255,255,.1);
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+    }
+#about p {
+    margin:10%;
+    font: 0em Niramit, sans-serif;
     -webkit-transition: all .5s ease-out;
     -moz-transition: all .5s ease-out;
     -o-transition: all .5s ease-out;
@@ -169,39 +181,20 @@ button[enabled]{
     cursor: pointer;
 }
 
-.sideButton {
-    margin:px;
-    margin-top:0;
-    font-size: 0px;
-    color: white;
-    transition: all .5s ease-out;
-    background-color: rgba(255,255,255,.1);
-    float: left;
-    margin-right:1%;
-    height: 120px;
-    line-height: 120px;
-    text-align: center;
-    border-radius: 10px;
-}
-.sideButton:hover {
-    background-color: rgba(255,255,255,.2);
-}
-#sideBar p {
-    display: block;
-    position: absolute;
-    top:-6vh;
-    right:2vh;
-}
 #clickAway {
-    z-index: 99;
-    display: none;
+    visibility: hidden;
     position: absolute;
     top:0;
     left:0;
     width:100%;
     height: 100%;
-    background-color: rgba(0,0,0,.5);
-    transition: all .5s, ease-out;
+    background-color: rgba(0,0,0,.8);
+
+    z-index: 1;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out;
 }
 .centerText {
     text-align: center;

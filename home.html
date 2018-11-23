@@ -14,6 +14,8 @@
 	<title>Ben Galaxy</title>
 </head>
 <body bgcolor="#000" id="body" onload = "pageOnLoad()" onresize="detectOrientation()">
+
+<div id="clickAway" onclick="clickAway()"></div>
 <img src="galaxy.gif" id="bgcanvas">
 </canvas>
 <container id="main">
@@ -24,16 +26,13 @@
 	<a target="_blank" href="https://github.com/AluminumChassis/BenGalaxy"><button class="project"><div>BenGalaxy<p> My website code is now open sourced. </p></div></button></a>
 	<a target="_blank" href="https://github.com/AluminumChassis/begin"><button class="project"><div>Begin JS<p>A JavaScript library for making web games</p></div></button></a>
 	<a href="other.html"><button class="project"><div>Web Projects<p> Random, smaller web projects. Mostly just things I made because I got bored. </p></button></div></a>
-	
-
+	<button onclick="aboutClick()" id="about"> ? <p id="aboutP">Hello, I'm <bold>Ben Ciccarelli</bold> from <bold>Arizona</bold>.<br> I love <bold>programming</bold> almost as much as I love <bold>computer science</bold>. I participate in <bold>chess</bold>, <bold>math</bold>, and <bold>coding</bold> competitions regularly.<br> Reach out to me and <bold>say hi</bold>! I'm always glad to meet new people. <br> <y style="font-size: .7em">(click anywhere to close)</y></p></button>
 
 	<!-- output to here - - > <div id="output" class="bottomLinks" style="bottom: 40px">output</div>-->
 </container>
 <div class="bottomLinks"><a href="mailto:ben@bengalaxy.com">Contact</a></div>
 <div class="bottomLinks" style="bottom: 80px">Copyright © 2018 Benjamin Ciccarelli</div>
 
-<button id="sideBar" onclick = "sideBarClick()"><p> &#171; </p><a href="mailto:ben@bengalaxy.com"><div class="sideButton">CONTACT ☏</div></a><a target="_blank" href="https://lichess.org/@/AluminumChassis"><div class="sideButton">CHESS&#9816</div></a></button>
-<div id="clickAway" onclick="clickAway()"></div>
 </body>
 
 	<script src="main.js"></script>
