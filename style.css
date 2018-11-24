@@ -147,7 +147,7 @@ bold {
     bottom: 20%;
     height: 20%;
     width:10%;
-    color: rgba(255,255,255,.2);
+    color: rgba(255,255,255,.1);
     padding: 1%;
     font-size: 10vh;
     border: 5px;
@@ -189,7 +189,7 @@ button[enabled]{
     width:100%;
     height: 100%;
     background-color: rgba(0,0,0,.8);
-
+    cursor: pointer;
     z-index: 1;
     -webkit-transition: all .5s ease-out;
     -moz-transition: all .5s ease-out;

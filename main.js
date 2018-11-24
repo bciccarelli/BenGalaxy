@@ -67,7 +67,7 @@ function clickAway() {
     document.getElementById("about").style.bottom="20%";
     document.getElementById("about").style.width="10%";
     document.getElementById("about").style.height="20%";
-    document.getElementById("about").style.color="rgba(255,255,255,.2)";
+    document.getElementById("about").style.color="rgba(255,255,255,.1)";
     document.getElementById("about").style.backgroundColor="rgba(255,255,255,.1)";
     document.getElementById("about").disabled=false;
 
