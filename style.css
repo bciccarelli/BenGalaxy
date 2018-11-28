@@ -22,6 +22,28 @@
     -ms-user-select: none;
     user-select: none;
 }
+.paypal {
+    border-radius: 10px;
+    border:0px;
+    color: #bbb;
+    font: 2.5vh Niramit, sans-serif;
+    background-color: rgba(100,0,100,.9);
+
+    -webkit-transition: all 1.5s ease-out;
+    -moz-transition: all 1.5s ease-out;
+    -o-transition: all 1.5s ease-out;
+    transition: all 1.5s ease-out;
+    cursor: pointer;
+}
+.paypal:hover {
+    border-radius: 10px;
+    border:0px;
+    padding-right: 100px;
+    padding-left: 100px;
+    color: #aaa;
+    font: 2.5vh Niramit, sans-serif;
+    background-color: rgba(0,0,0,.9);
+}
 .shadowReader {
     text-align: center;
     margin-top: 10%;
@@ -153,12 +175,17 @@ bold {
     border: 5px;
     font: 5em Niramit, sans-serif;
     border-color: #fff;
-    border-radius: 20px; 
+    border-radius: 30px; 
     background-color: rgba(255,255,255,.1);
     -webkit-transition: all .5s ease-out;
     -moz-transition: all .5s ease-out;
     -o-transition: all .5s ease-out;
     transition: all .5s ease-out;
+    }
+#about:hover {
+
+    background-color: rgba(255,255,255,.2);
+    border-radius: 4px; 
     }
 #about p {
     margin:10%;
