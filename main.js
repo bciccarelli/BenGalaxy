@@ -30,6 +30,7 @@ function ifOnline() {
 
   if(window.location.host.length) {
     document.getElementsByTagName("body")[0].innerHtml+="<!-- Global site tag (gtag.js) - Google Analytics -->\n<script async src='https://www.googletagmanager.com/gtag/js?id=UA-117084699-1'></script>\n<script>window.dataLayer = window.dataLayer || [];\nfunction gtag(){\ndataLayer.push(arguments);\n}\ngtag('js', new Date());\ngtag('config', 'UA-117084699-1');</script>"
+    console.log("success");
   }
 }
 function getOS() {
