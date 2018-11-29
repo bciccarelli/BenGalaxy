@@ -3,15 +3,22 @@ var acceptsCookies;
 function detectOrientation() {
 	if(window.innerWidth<window.innerHeight) {
 		for (i=0;i<document.getElementsByClassName("project").length;i++) {
-			document.getElementsByClassName("project")[i].style.height = window.innerHeight/6+"px";
-			document.getElementsByClassName("project")[i].style.width = "48%"
-		} 
+      document.getElementsByClassName("project")[i].style.height = window.innerHeight/6+"px";
+      document.getElementsByClassName("project")[i].style.width = "48%"
+    }
+    for (i=0;i<document.getElementsByClassName("project2").length;i++) {
+      document.getElementsByClassName("project2")[i].style.height = window.innerHeight/6+"px";
+      document.getElementsByClassName("project2")[i].style.width = "48%"
+    } 
 	} else {
 		for (i=0;i<document.getElementsByClassName("project").length;i++) {
 			document.getElementsByClassName("project")[i].style.height = 100+"px";
 			document.getElementsByClassName("project")[i].style.width = "16%";
-
 		}
+    for (i=0;i<document.getElementsByClassName("project2").length;i++) {
+      document.getElementsByClassName("project2")[i].style.height = 100+"px";
+      document.getElementsByClassName("project2")[i].style.width = "16%";
+    }
 	}
 }
 setTimeout(function() {
