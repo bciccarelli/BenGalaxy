@@ -12,11 +12,11 @@ function detectOrientation() {
     } 
 	} else {
 		for (i=0;i<document.getElementsByClassName("project").length;i++) {
-			document.getElementsByClassName("project")[i].style.height = window.innerHeight/7+"px";
+			document.getElementsByClassName("project")[i].style.height = window.innerHeight/8+"px";
 			document.getElementsByClassName("project")[i].style.width = "16%";
 		}
     for (i=0;i<document.getElementsByClassName("project2").length;i++) {
-      document.getElementsByClassName("project2")[i].style.height = window.innerHeight/7+"px";
+      document.getElementsByClassName("project2")[i].style.height = window.innerHeight/8+"px";
       document.getElementsByClassName("project2")[i].style.width = "16%";
     }
 	}
