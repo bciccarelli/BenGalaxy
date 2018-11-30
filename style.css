@@ -88,6 +88,10 @@ container {
     -ms-user-select: none;
     user-select: none;
 }
+bold {
+    font-weight: bold; 
+    color:black;
+}
 .project {
     border-radius: 10px;
     display: block;
@@ -106,6 +110,21 @@ container {
     -o-transition: all 1.5s ease-out;
     transition: all 1.5s ease-out;
     cursor: pointer;
+}
+.project div {
+    position: relative;
+    top: -4vh;
+}
+.project p {
+    position: absolute;
+    margin-top: 1%;
+    font: .75em Niramit, sans-serif;
+    line-height: 1.1;
+    }
+.project:hover {
+    color: white !important;
+    width: 30% !important;
+    background-color: rgba(20,0,48,.6) !important;
 }
 .project2 {
     border-radius: 10px;
@@ -126,28 +145,9 @@ container {
     transition: all 1.5s ease-out;
     cursor: pointer;
 }
-.project div {
-    position: relative;
-    top: -40px;
-}
-bold {
-    font-weight: bold; 
-    color:black;
-}
-.project p {
-    position: absolute;
-    margin-top: 1%;
-    font: .75em Niramit, sans-serif;
-    line-height: 1.1;
-    }
-.project:hover {
-    color: white !important;
-    width: 30% !important;
-    background-color: rgba(20,0,48,.6) !important;
-}
 .project2 div {
     position: relative;
-    top: -40px;
+    top: -4vh;
 }
 .project2 p {
     position: absolute;
