@@ -64,6 +64,13 @@ function getOS() {
 }
 var currentProject;
 function openProject(name) {
+  document.querySelectorAll('img').forEach(function(img){
+    if (img.src=="") {
+      img.parentElement.style.visibility='hidden';
+    } else {
+      img.parentElement.style.visibility='visible';
+    }
+  });
   for (i=0;i<document.getElementsByClassName("bottomLinks").length;i++) {
     document.getElementsByClassName("bottomLinks")[i].style.color = "black";
   } 

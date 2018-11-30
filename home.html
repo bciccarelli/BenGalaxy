@@ -32,9 +32,15 @@
 	<a target="_blank" href="donate.html"><button class="project2"><div>Donate<p> Any donations go towards my website and my projects, please feel free to donate! </p></div></button></a>
 	
 	<div onclick="hideOverlay()" id="overlay">
-		<p><h3 id="overlaytitle"></h3></p>
-		<div style="max-width: 40%; background-color: #000; color: #fff; padding: 2%"><h6 id="overlayp"></h6><a style="color: grey; text-decoration:none; be" target="_blank" id="overlaylink"><h6>check out this project --></h6></a><h6>(Click anywhere to close)</h6></div>
-		<div style="max-width: 40%; float:left; display: block;"><img></div>
+		<p><h3 style="margin: 0" id="overlaytitle"></h3></p>
+
+		<div>
+			<h6 id="overlayp"></h6><a style="color: grey; text-decoration:none; be" target="_blank" id="overlaylink"><h6>check out this project --></h6></a><h6>(Click anywhere to close)</h6>
+		</div>
+		<div>
+			<img onerror="console.log('hello')"/>
+		</div>
+		
 	</div>
 	<!-- output to here - - > <div id="output" class="bottomLinks" style="bottom: 40px">output</div>-->
 </container>
