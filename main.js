@@ -12,11 +12,11 @@ function detectOrientation() {
     } 
 	} else {
 		for (i=0;i<document.getElementsByClassName("project").length;i++) {
-			document.getElementsByClassName("project")[i].style.height = 100+"px";
+			document.getElementsByClassName("project")[i].style.height = window.innerHeight/7+"px";
 			document.getElementsByClassName("project")[i].style.width = "16%";
 		}
     for (i=0;i<document.getElementsByClassName("project2").length;i++) {
-      document.getElementsByClassName("project2")[i].style.height = 100+"px";
+      document.getElementsByClassName("project2")[i].style.height = window.innerHeight/7+"px";
       document.getElementsByClassName("project2")[i].style.width = "16%";
     }
 	}
@@ -62,32 +62,41 @@ function getOS() {
 
   return os;
 }
-function aboutClick() {
-    console.log("click");
-    document.getElementById("about").style.width="96%";
-    document.getElementById("about").style.height="96%";
-    //document.getElementById("about").style.top="10%";
-    document.getElementById("about").style.bottom="2%";
-    document.getElementById("about").style.color="grey";
-    document.getElementById("about").style.backgroundColor="rgba(255,255,255,1)";
-    document.getElementById("about").disabled=true;
-
-    document.getElementById("clickAway").style.backgroundColor="rgba(0,0,0,.3)";
-    document.getElementById("clickAway").style.visibility="visible";
-
-    document.getElementById("aboutP").style.fontSize=".4em";
+var currentProject;
+function openProject(name) {
+  for (i=0;i<document.getElementsByClassName("bottomLinks").length;i++) {
+    document.getElementsByClassName("bottomLinks")[i].style.color = "black";
+  } 
+  document.getElementById("overlaylink").style.visibility = "visible";
+  document.getElementById("overlay").style.visibility="visible";
+  document.getElementById("overlay").style.opacity="1";
+  switch (name) {
+      case "about":
+        document.getElementById("overlaytitle").innerHTML = "About"
+        document.getElementById("overlayp").innerHTML = "Hello, I'm Ben Ciccarelli from Arizona. I love computer science, programming, math, and chess."
+        document.getElementById("overlaylink").style.visibility = "hidden";
+        break;
+      case "galakshell":
+        document.getElementById("overlaytitle").innerHTML = "GalakShell"
+        document.getElementById("overlayp").innerHTML = "My shell for creating custom, easily accessible commands."
+        document.getElementById("overlaylink").href = "https://github.com/AluminumChassis/galakShell"
+        break;
+      case "neurogenesis":
+        document.getElementById("overlaytitle").innerHTML = "Neurogenesis"
+        document.getElementById("overlayp").innerHTML = "A working neural network written with C#. This is the basis for my neural network projects"
+        document.getElementById("overlaylink").href = "https://github.com/AluminumChassis/neurogenesis"
+        break;
+      default:
+          console.log("unrecognized project")
+  }
 }
-function clickAway() {
-
-    document.getElementById("about").style.bottom="20%";
-    document.getElementById("about").style.width="10%";
-    document.getElementById("about").style.height="20%";
-    document.getElementById("about").style.color="rgba(255,255,255,.1)";
-    document.getElementById("about").style.backgroundColor="rgba(255,255,255,.1)";
-    document.getElementById("about").disabled=false;
-
-    document.getElementById("clickAway").style.backgroundColor="rgba(0,0,0,0)";
-    document.getElementById("clickAway").style.visibility="hidden";
-
-    document.getElementById("aboutP").style.fontSize="0em";
+function hideOverlay(){
+  setTimeout(function() {
+    for (i=0;i<document.getElementsByClassName("bottomLinks").length;i++) {
+      document.getElementsByClassName("bottomLinks")[i].style.color = "white";
+    } 
+    document.getElementById("overlay").style.visibility="hidden";
+    document.getElementById("overlaylink").removeAttribute("href");
+    document.getElementById("overlay").style.opacity="0";
+  },10)
 }

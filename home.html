@@ -20,18 +20,25 @@
 </canvas>
 <container id="main">
 	<a href="home.html"><image class="headImage" src="BenGalaxy.png"></image></a>
-	<a target="_blank" href="https://github.com/AluminumChassis/galakShell"><button class="project"><div>GalakShell<p> A Galak-C shell for windows</p></div></button></a>
-	<a target="_blank" href="https://github.com/AluminumChassis/neuroGenesis"><button class="project"><div>NeuroGenesis<p> A neural network for learning simple data sets</p></div></button></a>
+
+	<button id="galakShell" onclick="openProject('galakshell')" class="project"><div>GalakShell<p> A Galak-C shell for windows </p></button></div>
+	<button id="galakShell" onclick="openProject('neurogenesis')" class="project"><div>NeuroGenesis<p> A neural network for learning simple data sets</p></div></button>
 	<a target="_blank" href="https://github.com/AluminumChassis/netter"><button class="project"><div>Netter<p>A JS Library for making online games without a server</p></div></button></a>
 	<a target="_blank" href="https://github.com/AluminumChassis/BenGalaxy"><button class="project"><div>BenGalaxy<p> My website code is now open sourced. </p></div></button></a>
 	<a target="_blank" href="https://github.com/AluminumChassis/begin"><button class="project"><div>Begin JS<p>A JavaScript library for making web games</p></div></button></a>
 	<a href="other.html"><button class="project"><div>Web Projects<p> Random, smaller web projects. Mostly just things I made because I got bored. </p></button></div></a>
-	<a href="donate.html"><button class="project2"><div>Donate<p> Consider donating to help me keep my website and projects up and running. </p></button></div></a>
-	<button onclick="aboutClick()" id="about"> ? <p id="aboutP">Hello, I'm <bold>Ben Ciccarelli</bold> from <bold>Arizona</bold>.<br> I love <bold>programming</bold> almost as much as I love <bold>computer science</bold>. <br> I participate in <bold>chess</bold>, <bold>math</bold>, and <bold>coding</bold> competitions regularly.<br> Reach out to me and <bold>say hi</bold>! I'm always glad to meet new people. <br> <y style="font-size: .7em">(click anywhere to close)</y></p></button>
-
+	
+	<button id="about" onclick="openProject('about')" class="project2"><div>About<p> Learn about me </p></button></div></a>
+	<a target="_blank" href="donate.html"><button class="project2"><div>Donate<p> Any donations go towards my website and my projects, please feel free to donate! </p></div></button></a>
+	
+	<div onclick="hideOverlay()" id="overlay">
+		<p><h3 id="overlaytitle"></h3></p>
+		<div style="max-width: 40%; background-color: #000; color: #fff; padding: 2%"><h6 id="overlayp"></h6><a style="color: grey; text-decoration:none; be" target="_blank" id="overlaylink"><h6>check out this project --></h6></a><h6>(Click anywhere to close)</h6></div>
+		<div style="max-width: 40%; float:left; display: block;"><img></div>
+	</div>
 	<!-- output to here - - > <div id="output" class="bottomLinks" style="bottom: 40px">output</div>-->
 </container>
-<div class="bottomLinks"><a href="mailto:ben@bengalaxy.com">Contact</a></div>
+<a class="bottomLinks" href="mailto:ben@bengalaxy.com">Contact</a>
 <div class="bottomLinks" style="bottom: 80px">Copyright © 2018 Benjamin Ciccarelli</div>
 
 </body>

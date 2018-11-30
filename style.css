@@ -25,10 +25,12 @@
 .paypal {
     border-radius: 10px;
     border:0px;
-    color: #bbb;
+    color: #000;
     font: 2.5vh Niramit, sans-serif;
-    background-color: rgba(100,0,100,.9);
-
+    background-color: #fff;
+    padding: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
     -webkit-transition: all 1.5s ease-out;
     -moz-transition: all 1.5s ease-out;
     -o-transition: all 1.5s ease-out;
@@ -38,8 +40,8 @@
 .paypal:hover {
     border-radius: 10px;
     border:0px;
-    padding-right: 100px;
-    padding-left: 100px;
+    padding-right: 200px;
+    padding-left: 200px;
     color: #aaa;
     font: 2.5vh Niramit, sans-serif;
     background-color: rgba(0,0,0,.9);
@@ -94,7 +96,6 @@ container {
     color: #bbb;
     font: 2.5vh Niramit, sans-serif;
     width: 16%;
-    height: 100px;
     background-color: rgba(100,0,240,.9);
 
     margin:.5%;
@@ -114,8 +115,7 @@ container {
     color: #bbb;
     font: 2.5vh Niramit, sans-serif;
     width: 16%;
-    height: 100px;
-    background-color: rgba(240,0,100,.8);
+    background-color: rgba(200,0,100,.8);
 
     margin:.5%;
     text-align: left;
@@ -128,7 +128,7 @@ container {
 }
 .project div {
     position: relative;
-    top: -30px;
+    top: -40px;
 }
 bold {
     font-weight: bold; 
@@ -147,9 +147,8 @@ bold {
 }
 .project2 div {
     position: relative;
-    top: -30px;
+    top: -40px;
 }
-
 .project2 p {
     position: absolute;
     margin-top: 1%;
@@ -161,41 +160,23 @@ bold {
     width: 30% !important;
     background-color: rgba(20,0,48,.6) !important;
 }
-#about {
+
+#overlay {
     position: absolute;
-    display: block;
-    z-index: 200;
-    right: 2%;
-    bottom: 20%;
-    height: 20%;
-    width:10%;
-    color: rgba(255,255,255,.1);
-    padding: 1%;
-    font-size: 10vh;
-    border: 5px;
-    font: 5em Niramit, sans-serif;
-    border-color: #fff;
-    border-radius: 30px; 
-    background-color: rgba(255,255,255,.1);
+    background-color: #ddd;
+    top:2%;
+    width:94%;
+    height:90%;
+    border-radius: 10px;
+    padding: 2%;
+    font: 3em Niramit, sans-serif;
+    visibility: hidden;
+    opacity: 0;
     -webkit-transition: all .5s ease-out;
     -moz-transition: all .5s ease-out;
     -o-transition: all .5s ease-out;
     transition: all .5s ease-out;
-    }
-#about:hover {
-
-    background-color: rgba(255,255,255,.2);
-    border-radius: 4px; 
-    }
-#about p {
-    margin:10%;
-    font: 0em Niramit, sans-serif;
-    -webkit-transition: all .5s ease-out;
-    -moz-transition: all .5s ease-out;
-    -o-transition: all .5s ease-out;
-    transition: all .5s ease-out;
-    }
-
+}
 button:hover {
     background-color: rgba(255,255,255,.2);
 }
@@ -215,7 +196,7 @@ button[enabled]{
     left:0;
     width:100%;
     height: 100%;
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba(0,0,0,0);
     cursor: pointer;
     z-index: 1;
     -webkit-transition: all .5s ease-out;
