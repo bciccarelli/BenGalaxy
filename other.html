@@ -1,6 +1,10 @@
 <!--COPYRIGHT 2018 BENJAMIN CICCARELLI-->
 <!DOCTYPE html>
 <html>
+<script type="text/javascript">
+	var d = new Date();
+	var time = d.getTime();
+</script>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" >
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +12,11 @@
 	<link rel="icon" href="earth.png" type="image/png"/>
 	<link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
 	<title>Ben Galaxy</title>
-	<script src="main.js"></script>
 </head>
-
 <body bgcolor="#000" id="body" onload = "pageOnLoad()" onresize="detectOrientation()">
-<img src="galaxy.gif" id="bgcanvas">
-</canvas>
 
+<img src="galaxy.gif" id="bgcanvas">
+<div id="clickAway" onclick="clickAway()"></div>
 <container id="main">
 	<a href="home.html"><image class="headImage" src="BenGalaxy.png"></image></a>
 
@@ -25,7 +27,9 @@
 	<a href="draw.html"><button class="project2"><div> Draw Pad <p> Make notes or draw on a dark canvas </p></div></button></a>
 
 </container>
-<div class="bottomLinks"><a href="mailto:ben@bengalaxy.com">Contact</a></div>
+<a class="bottomLinks" href="mailto:ben@bengalaxy.com">Contact</a>
 <div class="bottomLinks" style="bottom: 80px">Copyright © 2018 Benjamin Ciccarelli</div>
+
 </body>
+	<script src="main.js"></script>
 </html>
