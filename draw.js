@@ -1,6 +1,6 @@
 var drawPoints = [];
 var mousedown=false;
-var mousedownlast=false;
+var mousedownlast=true;
 var cnvs;
 var ctx2;
 var strokeWidth=2;
@@ -32,9 +32,6 @@ function startNotes() {
 			ctx2.beginPath();
 			ctx2.arc(mousePos.x,mousePos.y,document.getElementById('strokeWidth').value/2,0,2*Math.PI);
 			ctx2.fill();
-			ctx2.beginPath();
-			ctx2.arc(lastPos.x,lastPos.y,document.getElementById('strokeWidth').value/2,0,2*Math.PI);
-			ctx2.fill();
 		}
 	}, false);
 	cnvs.addEventListener('mouseup', function(evt) {
@@ -50,28 +47,20 @@ function startNotes() {
 		mousePos = getMousePos(cnvs, evt);
 		if(mousedown){
 			if(!eraser) {
-				if(mousedownlast) {
-					ctx2.lineWidth=document.getElementById('strokeWidth').value;
-					ctx2.strokeStyle=document.getElementById('colorField').value;
-					ctx2.lineCap="round";
-					
-					ctx2.beginPath();
-					ctx2.moveTo(lastPos.x,lastPos.y);		
-					ctx2.lineTo(mousePos.x,mousePos.y)
-					ctx2.stroke();
-				}
+				ctx2.lineWidth=document.getElementById('strokeWidth').value;
+				ctx2.strokeStyle=document.getElementById('colorField').value;
 			} else {
 				ctx2.lineWidth=document.getElementById('strokeWidth').value*2;
 				ctx2.strokeStyle="#000000";
-				ctx2.lineCap="round";
-				
-				ctx2.beginPath();
-				ctx2.moveTo(lastPos.x,lastPos.y);		
-				ctx2.lineTo(mousePos.x,mousePos.y)
-				ctx2.stroke();
 			}
+
+			ctx2.lineCap="round";
+			
+			ctx2.beginPath();
+			ctx2.moveTo(lastPos.x,lastPos.y);		
+			ctx2.lineTo(mousePos.x,mousePos.y)
+			ctx2.stroke();
 		}
-		mousedownlast=mousedown;
 		lastPos=mousePos;
 	}, false);
 
