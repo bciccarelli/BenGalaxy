@@ -166,7 +166,7 @@ bold {
     background-color: #ddd;
     top:2%;
     width:94%;
-    height:90%;
+    height:88%;
     border-radius: 10px;
     padding: 2%;
     font: 3em Niramit, sans-serif;
@@ -180,6 +180,9 @@ bold {
 #overlay h6 {
     margin-top: 2%;
     margin: 5%;
+}
+#overlay h3 {
+    color: black;
 }
 #overlay div {
     width: 40%;
