@@ -94,6 +94,11 @@ function openProject(name) {
         document.getElementById("overlayp").innerHTML = "A working neural network written with C#. This is the basis for my neural network projects"
         document.getElementById("overlaylink").href = "https://github.com/AluminumChassis/neurogenesis"
         break;
+        case "vitalcode":
+        document.getElementById("overlaytitle").innerHTML = "Vital Code"
+        document.getElementById("overlayp").innerHTML = "A code editor made with c# and windows forms. Has basic functions like opening, saving, and running python projects."
+        document.getElementById("overlaylink").href = "https://github.com/AluminumChassis/vitalcode"
+        break;
       default:
           console.log("unrecognized project")
   }
