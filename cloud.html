@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cloud</title>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<img id="image" src="data:image/png;base64, ">
+<p id="shown"></p>
+</body>
+
+<script src="aes.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+var xhttp = new XMLHttpRequest();
+var password="apapapa";
+var salt="salt";
+var data
+xhttp.onreadystatechange = async function() {
+	if (this.readyState == 4 && this.status == 200) {
+		var iv = this.responseText.split(":")[0];
+		var data = this.responseText.split(":")[1];
+        console.log(data)
+		decrypt(iv, data);
+	}
+};
+
+xhttp.open("GET", "https://d44dfc12.ngrok.io/one", true);
+xhttp.send();
+var key;
+async function decrypt(iv,data) {
+	key = await generateKey(password, 100);
+	
+    console.log("--- starting decryption ---")
+    console.log((key))
+    console.log(iv)
+    console.log(aesjs.utils.hex.toBytes(iv))
+    //key = ("1bf8be421b201adf247297140aa76cc8211620976125db505d348cd60bee4198");
+    //iv = new Uint8Array([29,71,82,10,220,8,99,156,2,213,188,150,215,176,31,114])
+    //data="4de8f8c821b4f3a1f638908ff89902d3"
+    var aesCbc = new aesjs.ModeOfOperation.cbc(Array.from(new Uint8Array(key)), aesjs.utils.hex.toBytes(iv));
+    var decryptedBytes = aesCbc.decrypt(aesjs.utils.hex.toBytes(data));
+    var decryptedText = aesjs.utils.utf8.fromBytes(decryptedBytes);
+    
+    document.getElementById('image').src+=(decryptedText)
+}
+function hexStringToUint8Array(hexString)
+{
+    if (hexString.length % 2 != 0)
+        throw "Invalid hexString";
+    var arrayBuffer = new Uint8Array(hexString.length / 2);
+
+    for (var i = 0; i < hexString.length; i += 2) {
+        var byteValue = parseInt(hexString.substr(i, 2), 16);
+        if (byteValue == NaN)
+            throw "Invalid hexString";
+        arrayBuffer[i/2] = byteValue;
+    }
+
+    return arrayBuffer;
+}
+function bytesToHexString(bytes)
+{
+    if (!bytes)
+        return null;
+
+    bytes = new Uint8Array(bytes);
+    var hexBytes = [];
+
+    for (var i = 0; i < bytes.length; ++i) {
+        var byteString = bytes[i].toString(16);
+        if (byteString.length < 2)
+            byteString = "0" + byteString;
+        hexBytes.push(byteString);
+    }
+
+    return hexBytes.join("");
+}
+function asciiToUint8Array(str)
+{
+    var chars = [];
+    for (var i = 0; i < str.length; ++i)
+        chars.push(str.charCodeAt(i));
+    return new Uint8Array(chars);
+}
+function bytesToASCIIString(bytes)
+{
+    return String.fromCharCode.apply(null, new Uint8Array(bytes));
+}
+function failAndLog(error)
+{
+    console.log(error);
+}
+
+function decodeIV(iv){
+	console.log(iv)
+	var ivarray=[];
+	for (var i = 0; i < iv.length; i+=1) {
+		ivarray.push(parseInt(iv[i],16));
+	}
+	return new Uint8Array(ivarray);
+}
+var saltBuffer;
+async function generateKey(password,iterations) {
+    password = encode(password);
+    salt = encode(salt);
+    console.log(password);
+
+	var key = await window.crypto.subtle.importKey('raw',password,{name: 'PBKDF2'},false,['deriveBits', 'deriveKey'])
+	var webKey = await window.crypto.subtle.deriveKey({ "name": 'PBKDF2',"salt": salt, "iterations": iterations,"hash": 'SHA-512'},key,{ "name": 'AES-CBC', "length": 128 },true,[ "encrypt", "decrypt" ])
+	return crypto.subtle.exportKey("raw", webKey);
+}
+
+function encode(b) {
+	console.log(b)
+	var a = [];
+	for(var i = 0; i < b.length; i++) a.push(b.charCodeAt(i));
+	return new Uint8Array(a);
+}
+function stringToUint(string) {
+    var string = btoa(unescape(encodeURIComponent(string))),
+        charList = string.split(''),
+        uintArray = [];
+    for (var i = 0; i < charList.length; i++) {
+        uintArray.push(charList[i].charCodeAt(0));
+    }
+    return new Uint8Array(uintArray);
+}
+
+function ab2str(buf) {
+    var result = '';
+    if (buf) {
+        var bytes = new Uint8Array(buf);
+        for (var i = 0; i < bytes.byteLength; i++) {
+            result = result + (bytes[i].toString(16));
+        }
+    }
+    return result;
+}
+</script>
+</html>
