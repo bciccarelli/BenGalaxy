@@ -4,105 +4,82 @@
 	<title>Cloud</title>
 	<meta charset="utf-8"/>
 </head>
-<body>
-<img id="image" src="data:image/png;base64, ">
+<body onload="onload()">
+<img id="image" width="720" height="480" src="data:image/jpeg;base64,">
 <p id="shown"></p>
+<label>Password</label>
+<input id="password" onchange="update()">
+<br>
+<label>Salt</label>
+<input id="salt" onchange="update()">
+<br>
+<label>Link</label>
+<input id="link" onchange="update()">
+<br>
+<label>Red Image</label>
+<input id="red" name="file" type="radio" value="red" onchange="update()">
+<br>
+<label>Car Image</label>
+<input id="car" name="file" type="radio" value="car" onchange="update()">
+<br>
+<label>Cookie Image</label>
+<input id="cookie" name="file" type="radio" value="cookie" onchange="update()">
+<button onclick="get()">open file</button>
+
 </body>
 
 <script src="aes.js" type="text/javascript"></script>
 <script type="text/javascript">
 
 var xhttp = new XMLHttpRequest();
-var password="apapapa";
+var link = "https://ecf6e909.ngrok.io/";
+var password="banana";
 var salt="salt";
-var data
+var file="red"
 xhttp.onreadystatechange = async function() {
 	if (this.readyState == 4 && this.status == 200) {
+        //document.getElementById('image').src+=this.responseText
 		var iv = this.responseText.split(":")[0];
 		var data = this.responseText.split(":")[1];
         console.log(data)
 		decrypt(iv, data);
 	}
 };
-
-xhttp.open("GET", "https://d44dfc12.ngrok.io/one", true);
-xhttp.send();
+function get() {
+    if(file){
+        console.log("successfully retrieved file")
+        xhttp.open("GET", link+file, true);
+        xhttp.send();
+    }
+}
 var key;
 async function decrypt(iv,data) {
-	key = await generateKey(password, 100);
-	
-    console.log("--- starting decryption ---")
-    console.log((key))
-    console.log(iv)
-    console.log(aesjs.utils.hex.toBytes(iv))
-    //key = ("1bf8be421b201adf247297140aa76cc8211620976125db505d348cd60bee4198");
-    //iv = new Uint8Array([29,71,82,10,220,8,99,156,2,213,188,150,215,176,31,114])
-    //data="4de8f8c821b4f3a1f638908ff89902d3"
+	key = await generateKey(100);
     var aesCbc = new aesjs.ModeOfOperation.cbc(Array.from(new Uint8Array(key)), aesjs.utils.hex.toBytes(iv));
     var decryptedBytes = aesCbc.decrypt(aesjs.utils.hex.toBytes(data));
+    console.log(decryptedBytes[2])
     var decryptedText = aesjs.utils.utf8.fromBytes(decryptedBytes);
-    
-    document.getElementById('image').src+=(decryptedText)
-}
-function hexStringToUint8Array(hexString)
-{
-    if (hexString.length % 2 != 0)
-        throw "Invalid hexString";
-    var arrayBuffer = new Uint8Array(hexString.length / 2);
-
-    for (var i = 0; i < hexString.length; i += 2) {
-        var byteValue = parseInt(hexString.substr(i, 2), 16);
-        if (byteValue == NaN)
-            throw "Invalid hexString";
-        arrayBuffer[i/2] = byteValue;
-    }
-
-    return arrayBuffer;
-}
-function bytesToHexString(bytes)
-{
-    if (!bytes)
-        return null;
-
-    bytes = new Uint8Array(bytes);
-    var hexBytes = [];
-
-    for (var i = 0; i < bytes.length; ++i) {
-        var byteString = bytes[i].toString(16);
-        if (byteString.length < 2)
-            byteString = "0" + byteString;
-        hexBytes.push(byteString);
-    }
-
-    return hexBytes.join("");
-}
-function asciiToUint8Array(str)
-{
-    var chars = [];
-    for (var i = 0; i < str.length; ++i)
-        chars.push(str.charCodeAt(i));
-    return new Uint8Array(chars);
-}
-function bytesToASCIIString(bytes)
-{
-    return String.fromCharCode.apply(null, new Uint8Array(bytes));
-}
-function failAndLog(error)
-{
-    console.log(error);
+    console.log(decryptedText[0])
+    document.getElementById('image').src="data:image/jpeg;base64,"+(decryptedText)
 }
 
-function decodeIV(iv){
-	console.log(iv)
-	var ivarray=[];
-	for (var i = 0; i < iv.length; i+=1) {
-		ivarray.push(parseInt(iv[i],16));
-	}
-	return new Uint8Array(ivarray);
+function onload(){
+    document.getElementById("link").value = link;
+    document.getElementById("password").value = password;
+    document.getElementById("salt").value = salt;
+    document.getElementById("red").checked ? file="red":document.getElementById("car").checked ? file="car":file="cookie"
 }
-var saltBuffer;
-async function generateKey(password,iterations) {
+function update(){
+    link = document.getElementById("link").value;
+    salt = document.getElementById("salt").value;
+    password = document.getElementById("password").value;
+    document.getElementById("red").checked ? file="red":document.getElementById("car").checked ? file="car":file="cookie"
+}
+async function generateKey(iterations) {
+    password = document.getElementById("password").value;
     password = encode(password);
+
+    salt = document.getElementById("salt").value;
     salt = encode(salt);
     console.log(password);
 
