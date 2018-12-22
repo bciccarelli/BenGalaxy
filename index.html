@@ -83,7 +83,13 @@ block {
 	background-color: #333;
 	width:100%;
 	box-shadow: 0 0px 5px .5px black;
-	/*box-shadow: 10px 0 5px -4px rgba(255, 255, 255, 0.3), -10px 0 5px -4px rgba(255, 255, 255, 0.3);*/
+	-webkit-transition: all .5s ease-out;
+	-moz-transition: all .5s ease-out;
+	-o-transition: all .5s ease-out;
+	transition: all .5s ease-out;
+}
+block:hover {
+	box-shadow: 0 0px 20px 5px black;
 }
 block header {
 	font-size: 4vh;
@@ -112,7 +118,6 @@ block symbols {
 	padding-top: 2px;
 	padding-bottom: 0px;
 	color:black;
-	background-color: white
 }
 block symbols img {
 	height: 24px;
