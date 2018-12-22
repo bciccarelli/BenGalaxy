@@ -4,15 +4,17 @@
 	<title>Bengalaxy</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
 	<meta charset="utf-8">
+	<meta name="description" content="BenGalaxy is Benjamin Ciccarelli's personal website. Here you can take a look at some of my projects and work, explore live demos, and maybe even contact me...?">
 	<link rel="icon" type="image/png" href="images/icon.png"/>
 	<link rel="shortcut icon" type="image/png" href="images/icon.png"/>
 </head>
 <style type="text/css">
 *{
-	-webkit-transition: all 1s ease-out;
-	-moz-transition: all 1s ease-out;
-	-o-transition: all 1s ease-out;
-	transition: all 1s ease-out;
+	
+	-webkit-transition: all .5s ease-out;
+	-moz-transition: all .5s ease-out;
+	-o-transition: all .5s ease-out;
+	transition: all .5s ease-out;
 }
 body {
 	margin:0%;
@@ -67,10 +69,6 @@ block {
 	background-color: #333;
 	width:100%;
 	box-shadow: 0 0px 5px .5px black;
-	-webkit-transition: all .5s ease-out;
-	-moz-transition: all .5s ease-out;
-	-o-transition: all .5s ease-out;
-	transition: all .5s ease-out;
 }
 block:hover {
 	box-shadow: 0 0px 20px 5px black;
@@ -128,8 +126,8 @@ bottom {
 
 @media screen and (max-width: 1000px) {
 	contentright {
-		float: left;
-		padding:0%;
+		float: none;
+		padding: 0%;
 		display: block;
 		position: relative;
 		color: white;
@@ -139,6 +137,7 @@ bottom {
 		width:90%;
 	}
 	contentleft {
+		float: none;
 		margin: 5%;
 		width:90%;
 	}
