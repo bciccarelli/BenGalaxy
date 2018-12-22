@@ -1,6 +1,5 @@
 canvas = document.getElementById("wave");
 ctx = canvas.getContext("2d");
-canvas.width=canvas.parentElement.clientWidth;
 offset = canvas.height/2;
 var vel1 = 6;
 var vel2 = 2;
@@ -13,6 +12,8 @@ ctx.lineCap = "round";
 ctx.lineWidth = 30;
 //ctx.filter = 'blur(1px)';
 function drawWave() {
+
+	canvas.width=canvas.parentElement.clientWidth;
 	ctx.clearRect(0,0,canvas.width,canvas.height)
 	x3+=vel3;
 	ctx.beginPath();
