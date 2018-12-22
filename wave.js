@@ -8,12 +8,11 @@ var x1,x2,x3;
 x1=x2=x3=0;
 var stretch=10;
 var stretchVel=0;
-ctx.lineCap = "round";
-ctx.lineWidth = 30;
 //ctx.filter = 'blur(1px)';
 function drawWave() {
-
 	canvas.width=canvas.parentElement.clientWidth;
+	ctx.lineCap = "round";
+	ctx.lineWidth = 30;
 	ctx.clearRect(0,0,canvas.width,canvas.height)
 	x3+=vel3;
 	ctx.beginPath();
