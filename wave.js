@@ -11,7 +11,7 @@ var stretch=10;
 var stretchVel=0;
 ctx.lineCap = "round";
 ctx.lineWidth = 30;
-ctx.filter = 'blur(1px)';
+//ctx.filter = 'blur(1px)';
 function drawWave() {
 	ctx.clearRect(0,0,canvas.width,canvas.height)
 	x3+=vel3;
