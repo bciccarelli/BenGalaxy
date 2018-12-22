@@ -2,164 +2,23 @@
 <html>
 <head>
 	<title>Bengalaxy</title>
+	<!-- meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="keywords" content="Programmer,Coder,AI,Neural Networks,C#,Assembly,javascript,python">
 	<meta name="author" content="Benjamin Ciccarelli">
 	<meta name="description" content="Benjamin Ciccarelli's personal website. Here you can take a look at my projects and work, explore live demos, and contact me through various means.">
+	<!-- icons -->
 	<link rel="icon" type="image/png" href="images/icon.png"/>
 	<link rel="shortcut icon" type="image/png" href="images/icon.png"/>
+	<!-- style sheets, fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+	<link href="css/main.css" rel="stylesheet"> 
 </head>
-<style type="text/css">
-*{
-	
-	-webkit-transition: all .5s ease-out;
-	-moz-transition: all .5s ease-out;
-	-o-transition: all .5s ease-out;
-	transition: all .5s ease-out;
-}
-body {
-	margin:0%;
-	font: 2vh 'Montserrat', monospace;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    background-color: rgb(10,0,40);
-    background-attachment: fixed;
-}
-a {
-	color: white;
-	text-decoration:none;
-	background-color: rgb(150,0,200);
-}
-a:hover {
-	color: rgb(150,0,200);
-	text-decoration:none;
-	background-color: white;
-}
-img:hover{
-	width: 100%;
-}
-contentright {
-	right: 10%;
-	padding:0%;
-	display: block;
-	width:30%;
-	position: fixed;
-	color: white;
-}
-contentleft {
-	float: left;
-	margin-left: 5%;
-	padding:0%;
-	display: block;
-	width:50%;
-	position: relative;
-	color: white;
-}
-hr {
-	margin-top: 0;
-}
-block {
-	display: block;
-	padding-top: 3%;
-	padding-bottom: 3%;
-
-	margin: 0;
-	margin-bottom: 3%;  
-	background-color: #333;
-	width:100%;
-	box-shadow: 0 0px 5px .5px black;
-}
-block:hover {
-	box-shadow: 0 0px 20px 5px black;
-}
-block header {
-	font-size: 4vh;
-	margin-left: 3%;
-	margin-bottom: 0%;
-	color: #0055dd; 
-}
-block header {
-	font-size: 4vh;
-	margin-left: 3%;
-	margin-bottom: 0%;
-	color: #0055dd; 
-}
-block text {
-	display: block;
-	font-size: 2vh;
-	margin: 3%;
-}
-block symbols {
-	float: right;
-	margin-right: 5%;
-	border-radius: 10px;
-	padding-left: 5px;
-	padding-right: 2px;
-
-	padding-top: 2px;
-	padding-bottom: 0px;
-	color:black;
-}
-block symbols img {
-	height: 24px;
-	width: 24px;
-	margin: 0;
-	margin-right: 3px; 
-}
-block symbols img:hover{
-	cursor: pointer;
-	width: 24px;
-	-webkit-filter: invert(100%);
-	-moz-filter: invert(100%);
-	-o-filter: invert(100%);
-	filter: invert(100%);
-}
-bottom {
-	text-align: center;
-	color: white;
-	position: fixed;
-	right: 10%;
-	bottom: 2%;
-	display: block;
-}
-
-@media screen and (max-width: 1000px) {
-	contentright {
-		float: none;
-		padding: 0%;
-		display: block;
-		position: relative;
-		color: white;
-		margin: 15%;
-		margin-top: 5%; 
-		margin-bottom: 5%; 
-		width:90%;
-	}
-	contentleft {
-		float: none;
-		margin: 5%;
-		width:90%;
-	}
-	bottom {
-		text-align: center;
-		position: relative;
-		margin: 0;
-		right: 0;
-		margin-bottom: 2%;
-		display: block;
-		width:100%;
-	}
-}
-</style>
 <body background="images/space.jpeg">
 <contentleft>
 	<block>
 		<img style="margin: 0" width="100%" src="images/bengalaxy.png"><br>
-
 		<canvas style="margin: 0; position: relative; display: block;" height="120px" id="wave"></canvas>
 	</block>
 	<block>
@@ -198,5 +57,5 @@ bottom {
 			<a href="">contact me</a>
 	</bottom>
 </body>
-<script type="text/javascript" src="wave.js"></script>
+<script type="text/javascript" src="js/wave.js"></script>
 </html>
