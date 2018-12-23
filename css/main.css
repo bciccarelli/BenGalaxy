@@ -29,6 +29,7 @@ img:hover{
 	width: 100%;
 }
 contentright {
+	top: 0%;
 	right: 10%;
 	padding:0%;
 	display: block;
@@ -105,12 +106,18 @@ block symbols img:hover{
 	filter: invert(100%);
 }
 bottom {
+	background-color: grey;
+	padding: 1%;
 	text-align: center;
 	color: white;
 	position: fixed;
 	right: 10%;
 	bottom: 2%;
 	display: block;
+	box-shadow: 0 0px 5px .5px black;
+}
+bottom:hover {
+	box-shadow: 0 0px 20px 5px black;
 }
 
 @media screen and (max-width: 1000px) {

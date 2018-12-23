@@ -1,9 +1,9 @@
 canvas = document.getElementById("wave");
 ctx = canvas.getContext("2d");
 offset = canvas.height/2;
-var vel1 = 6;
-var vel2 = 2;
-var vel3 = 4;
+var vel1 = 2*Math.E;
+var vel2 = 2*Math.PI;
+var vel3 = 2*Math.sqrt(2);
 var x1,x2,x3;
 x1=x2=x3=0;
 var stretch=10;
