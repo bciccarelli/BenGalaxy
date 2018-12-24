@@ -50,11 +50,9 @@ hero {
 	padding-top: 10vh;
 	text-align: center;
 	margin: 0;
-	margin-bottom: 5%; 
 	display: block;
 	height: 90vh;
 	width: 100%;
-
 	background: linear-gradient(137deg, rgb(75,0,125), rgb(50,0,100));
 }
 hero img {
@@ -67,9 +65,8 @@ hero img {
 }
 .top {
 	margin-left: 25%;
-	margin-bottom:10%;  
-	width: 50vw;
-	
+	margin-bottom: 3%;  
+	width: 100%;
 	box-shadow: 0 0px 5px .5px rgb(75,0,200);
 	text-align: center;
 	background: #333;
@@ -96,6 +93,8 @@ hero img {
 	color: rgb(75,0,200);
 }
 content {
+	margin-top: 5vh; 
+	margin-bottom: 8vh; 
 	margin-left: 25%;
 	padding:0%;
 	display: block;

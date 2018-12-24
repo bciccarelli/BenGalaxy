@@ -1,4 +1,4 @@
-function goToProjects() {
-	var e = document.getElementById("projects");
+function goTo(id) {
+	var e = document.getElementById(id);
 	e.scrollIntoView(true); 
 }
