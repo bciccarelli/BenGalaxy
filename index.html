@@ -15,9 +15,19 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
 	<link href="css/main.css" rel="stylesheet"> 
 </head>
-<body background="images/space.jpeg">
-<contentleft>
-	<block style="padding-bottom: 0; ">
+<body>
+<hero>
+	<div class="intro">Ben Ciccarelli</div>
+	<div class="desc">A high-schooler from Arizona that loves to learn about computer science</div>
+	<div class="desc"><button onclick="goToProjects()">View My Projects</button><button>Contact</button></div>
+
+</hero>
+
+<content id="projects">
+	<div class="top" style="margin-left: 0;">
+		<div class="section">My Projects</div>
+	</div>
+	<block style="padding-bottom: 0; display: none">
 		<img style="margin: 0" width="100%" src="images/bengalaxy.png"><br>
 
 		<canvas style="margin: 0; position: relative; display: block;" height="60px" id="wave"></canvas>
@@ -39,28 +49,9 @@
 		<img width = "50%"src="images/GalakShell.jpg"><br>
 		<text>A shell that allows the easy creation of custom commands, to speed up monotonous or repetitive tasks simply. <a href="">Github ></a></text>
 	</block>
-</contentleft>
-<contentright>
-	<block>
-		<header>Who are you?</header>
-		<text>I am Ben Ciccarelli, a high-schooler from Arizona<br></text>
-	</block>
-	<block>
-		<header>What are you doing?</header>
-		<text>I am constantly learning new things about computer science on my own.<br></text>
-	</block>
-	<block>
-		<header>What can you do?</header>
-		<text>I can create programs and such with ARM assembly, c#, python, and javascript.<br></text>
-	</block>
-	<block>
-		<header>How can I contact you?</header>
-		<text>You can <a href="">email me,</a> and maybe I'll get into further contact. I don't have any social media.</text>
-	</block>
-</contentright>
+</content>
 <bottom>©Copyright 2018 Ben Ciccarelli
 	</bottom>
-
 </body>
 <script type="text/javascript" src="js/wave.js"></script>
 <script type="text/javascript" src="js/widgets.js"></script>
