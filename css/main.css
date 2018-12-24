@@ -209,5 +209,9 @@ bottom:hover {
 	block symbols img {
 		height: 5vw;
 		width: 5vw;
+	}	
+	block symbols img:hover {
+		cursor: pointer;
+		width: 5vw;
 	}
 }
