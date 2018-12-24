@@ -15,53 +15,68 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
 	<link href="css/main.css" rel="stylesheet"> 
 </head>
-<body>
+<body background="images/space.jpeg">
+
+<div class="navBar"><button onclick="pageSwitch(0)">Home</button><button onclick="pageSwitch(1)">Projects</button><button onclick="pageSwitch(2)">About</button><button onclick="pageSwitch(3)">Contact</button></div>
+
+<button id="switchLeft" onclick="left()" disabled><</button>
+<button id="switchRight" onclick="right()">></button>
+
+<table id="frame">
+<tr>
+<td>
 <hero>
 	<div class="intro">Ben Ciccarelli</div>
 	<div class="desc">A high-schooler from Arizona that loves to learn about computer science</div>
-	<div class="desc"><button onclick="goTo('projects')">View My Projects</button><button onclick="goTo('contact')">Contact</button></div>
-
+	<div class="desc"></div>
 </hero>
-
+</td><td>
 <content id="projects">
-	<div class="top" style="margin-left: 0;">
-		<div class="section">My Projects</div>
-	</div>
 	<block style="padding-bottom: 0; display: none">
 		<img style="margin: 0" width="100%" src="images/bengalaxy.png"><br>
-
 		<canvas style="margin: 0; position: relative; display: block;" height="60px" id="wave"></canvas>
 	</block>
 	<block>
+		<button class="hotButton"> Live Demo > </button>
 		<header>BCloud<symbols><img src="images/live.png"><img src="images/GitHub-Mark-64px.png"></symbols></header><br>
 		<hr>
-		<text>A simple cloud data-store, running on a private server. <a href="">live demo ></a></text>
+		<text>A simple cloud data-store, running on a private server.</text>
 	</block>
 	<block>
+		<button class="hotButton"> Github > </button>
 		<header>NeuroGenesis<symbols><img src="images/GitHub-Mark-64px.png"></symbols></header><br>
 		<hr>
-		<img width = "50%"src="images/NeuroGenesis.jpg"><br>
-		<text>A neural network with capabilities to learn games such as tic tac toe. <a href="">Github ></a></text>
+		<text>A neural network with capabilities to learn games such as tic tac toe. </text>
+		
 	</block>
 	<block>
+		<button class="hotButton"> Github > </button>
 		<header>GalakShell<symbols><img src="images/GitHub-Mark-64px.png"></symbols></header><br>
 		<hr>
-		<img width = "50%"src="images/GalakShell.jpg"><br>
-		<text>A shell that allows the easy creation of custom commands, to speed up monotonous or repetitive tasks simply. <a href="">Github ></a></text>
+		<text>A shell that allows the easy creation of custom commands, to speed up monotonous or repetitive tasks simply.</text>
+		
 	</block>
 </content>
+</td>
+<td>
+<smallHero>
+	<div class="intro" style="margin-top: 0;">About Me</div>
+	<div class="desc">My name is Benjamin Ciccarelli, and I'm a self-taught programmer.</div>
+	<hr>
+	<div class="desc">I made this website to show and hold my projects for everyone to see. Throughout this site are live demos and easter eggs for those interested.</div>
+</smallHero>
+</td>
+<td>
+<smallHero1>
+	<div class="intro" style="margin-top: 0;">Contact</div>
+	<div class="desc">Email:</div>
+	<div class="desc">Formal: Ben@bengalaxy.com<br> Informal: Aluminumchassis@gmail.com</div>
+</smallHero1>
+</td>
+</tr>
+</table>
 
-<content id="contact">
-	<div class="top" style="margin-left: 0;">
-		<div class="section">Contact</div>
-	</div>
-	<block>
-		<header>Email</header><br>
-		<hr>
-		<text>Formal: ben@bengalaxy.com<br>Informal: aluminumchassis@gmail.com</text>
-	</block>
-</content>
-<bottom>©Copyright 2018 Ben Ciccarelli
+<bottom style="display: none">©Copyright 2018 Ben Ciccarelli
 	</bottom>
 </body>
 <script type="text/javascript" src="js/wave.js"></script>
