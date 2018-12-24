@@ -205,5 +205,9 @@ bottom:hover {
 	}
 	.intro {
 		margin-top: 5vh;
+	}	
+	block symbols img {
+		height: 5vw;
+		width: 5vw;
 	}
 }
