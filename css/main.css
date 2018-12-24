@@ -24,7 +24,7 @@ body {
 a {
 	color: white;
 	text-decoration:none;
-	background-color: rgb(75,0,150);
+	background-color: rgb(100,0,250);
 	padding-right: 10px;
 	padding-left: 10px;
 }
@@ -67,12 +67,12 @@ hero img {
 	margin-left: 25%;
 	margin-bottom: 3%;  
 	width: 100%;
-	box-shadow: 0 0px 5px .5px rgb(75,0,200);
+	box-shadow: 0 0px 5px .5px rgb(100,0,250);
 	text-align: center;
 	background: #333;
 }
 .top:hover {
-	box-shadow: 0 0px 20px 5px rgb(75,0,200);
+	box-shadow: 0 0px 20px 5px rgb(100,0,250);
 }
 .intro {
 	margin-top:10vh; 
@@ -90,7 +90,7 @@ hero img {
 .section {
 	padding: 3%;
 	font-size: 6vh;
-	color: rgb(75,0,200);
+	color: rgb(100,0,250);
 }
 content {
 	margin-top: 5vh; 
@@ -113,7 +113,7 @@ block {
 	margin-bottom: 3%;  
 	background-color: #333;
 	width: 100%;
-	box-shadow: 0 0px 5px .5px rgb(75,0,200);
+	box-shadow: 0 0px 5px .5px rgb(100,0,250);
 }
 block img {
 	margin: 2.5%;
@@ -122,13 +122,13 @@ block img:hover{
 	width: 95%;
 }
 block:hover {
-	box-shadow: 0 0px 20px 5px rgb(75,0,200);
+	box-shadow: 0 0px 20px 5px rgb(100,0,250);
 }
 block header {
 	font-size: 4vh;
 	margin-left: 3%;
 	margin-bottom: 0%;
-	color: rgb(75,0,200);
+	color: rgb(100,0,250);
 }
 block text {
 	display: block;
