@@ -45,8 +45,6 @@ button:hover{
 	color: rgba(0,0,0,0);
 	background-color: white;
 }
-
-
 hero {
 	color:white;
 	padding-top: 10vh;
@@ -205,5 +203,8 @@ bottom:hover {
 		margin-bottom: 2%;
 		display: block;
 		width:100%;
+	}
+	.intro {
+		padding-top: 5vh;
 	}
 }
