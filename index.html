@@ -15,9 +15,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
 	<link href="css/main.css" rel="stylesheet"> 
 </head>
-<body background="images/space.jpeg">
+<body onload="pageSwitch(0)" background="images/space.jpeg">
 
-<div class="navBar"><button onclick="pageSwitch(0)">Home</button><button onclick="pageSwitch(1)">Projects</button><button onclick="pageSwitch(2)">About</button><button onclick="pageSwitch(3)">Contact</button></div>
+<div class="navBar"><button onclick="auto=true;pageSwitch(0)">Home</button><button onclick="auto=true;pageSwitch(1)">Projects</button><button onclick="auto=true;pageSwitch(2)">About</button><button onclick="auto=true;pageSwitch(3)">Contact</button></div>
 
 <button id="switchLeft" onclick="left()" disabled><</button>
 <button id="switchRight" onclick="right()">></button>

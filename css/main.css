@@ -3,10 +3,10 @@
 	-moz-transition: all .5s ease-out;
 	-o-transition: all .5s ease-out;
 	transition: all .5s ease-out;
-	outline: none;
+	outline: 0;
 }
 ::selection {
-  background: #000; /* WebKit/Blink Browsers */
+  background: #000;
 }
 ::-moz-selection {
   background: #000;
