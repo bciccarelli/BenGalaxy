@@ -89,6 +89,7 @@ button{
 button:hover{
 	color: rgba(0,0,0,.5);
 	background-color: white;
+	cursor: pointer;
 }
 hero {
 	color:white;
@@ -194,7 +195,7 @@ hr {
 block {
 	float: left;
 	display: block;
-	padding-top: 1vh;
+	padding-top: .5vh;
 	margin-right: 2%;
 	margin-bottom: 3%;  
 	background:linear-gradient(-330deg, rgb(100,0,150), rgb(50,0,100));
@@ -205,8 +206,8 @@ block {
 block:hover {
 	box-shadow: 0 0px 20px 5px rgb(100,0,250);
 }
-block header {
-	font-size: 4vh;
+block h1 {
+	font-size: 3vh;
 	margin-left: 3%;
 	padding: 0;
 	margin-bottom: 0%;
