@@ -31,27 +31,25 @@ function left(){
 		pageSwitch(currentPage-1)
 	}
 }
-
 window.addEventListener("keydown", function(e){
 	if(e.keyCode==37){left();e.preventDefault();}
 	if(e.keyCode==39){right();e.preventDefault();}
 })
-
-var n;
-setInterval(function(){
-	if(!auto){
-		pageSwitch(Math.round(window.scrollX/screen.width))
-	}},1000);
-window.onscroll = function(){
-	var d = new Date();
-	n = d.getTime();
-	setTimeout(function(){
-		var d = new Date();
-		if(d.getTime()-n>180){
-			console.log("here")
-			if(!auto){
-				pageSwitch(Math.round(window.scrollX/screen.width))
-			}
+var b;
+window.addEventListener("mouseup", function(e){
+	clearTimeout(b);
+	b = setTimeout(function(){
+		if(!auto){
+			pageSwitch(Math.round(window.scrollX/screen.width))
 		}
-	},200)
+	},1000)
+})
+var t;
+window.onscroll = function(){
+	clearTimeout(t);
+	t = setTimeout(function(){
+		if(!auto){
+			pageSwitch(Math.round(window.scrollX/screen.width))
+		}
+	},500)
 };
