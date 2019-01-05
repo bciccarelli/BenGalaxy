@@ -122,7 +122,7 @@ smallHero1 {
 	margin-top: 10%;
 	height: 50vh;
 	width: 100%;
-	background: linear-gradient(-330deg, rgb(100,0,150), rgb(50,0,100));
+	background: linear-gradient(150deg, rgb(100,0,150), rgb(50,0,100));
 }
 smallHero .desc {
 	font-size: 4vh;
